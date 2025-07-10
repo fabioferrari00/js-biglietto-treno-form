@@ -10,7 +10,15 @@ calcTicket.addEventListener('click', function (e) {
   const km = document.getElementById('km').value;
   const age = document.getElementById('age').value;
 
-  console.log(name, km, age);
+  let discount = 0;
+  let price = 0.21 * km;
 
+  if (age < 18) {
+    discount = price * 20 / 100;
+  } else if (age > 65) {
+    discount = price * 40 / 100;
+  }
+  price = price - discount;
+  console.log(price.toFixed(2));
 
 })

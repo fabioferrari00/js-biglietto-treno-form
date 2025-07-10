@@ -10,25 +10,25 @@
   <title>Document</title>
 </head>
 
-<body class="bg-green">
+<body class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <h2 class="text-center my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+      <h2 class="text-center text-light my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+      <div class="col-12 rounded-5 bg-trasparent p-5">
         <form action="#">
-          <div class="row g-3">
+          <div class="row g-5">
             <div class="col-12 col-md-4">
-              <label for="" class="form-label">Nome e Cognome</label>
+              <label for="" class="form-label text-light">Nome e Cognome</label>
               <input type="text" name="name" id="name" class="form-control" placeholder="Inserisci Nome e Cognome"
                 required>
             </div>
             <div class="col-12 col-md-4">
-              <label for="" class="form-label">Km da percorrere</label>
+              <label for="" class="form-label text-light">Km da percorrere</label>
               <input type="text" name="km" id="km" class="form-control" placeholder="Inserisci i km da percorrere"
                 required>
             </div>
             <div class="col-12 col-md-4">
-              <label for="" class="form-label">Fascia età</label>
+              <label for="" class="form-label text-light">Fascia età</label>
               <select name="age" id="age" class="form-select">
                 <option value="">Inserisci la tua fascia</option>
                 <option value="u">Minorenne</option>
@@ -36,29 +36,38 @@
                 <option value="null">Nessuno</option>
               </select>
             </div>
-            <div class="col-12">
-              <button id="calc-ticket" class="btn btn-primary">Calcola bilgietto</button>
+            <div class="col-12 text-center ">
+              <button id="calc-ticket" class="btn btn-warning">Calcola bilgietto</button>
             </div>
           </div>
         </form>
       </div>
-      <div class="col-12">
-        <h2 class="text-center my-3">IL TUO BIGLIETTO</h2>
+      <div class="col-12 text-light rounded-3 bg-trasparent my-4">
+        <h2 class="text-center">IL TUO BIGLIETTO</h2>
         <form action="#">
           <div class="row">
-            <div class="col-12 col-md-4">
-              <h4>
-                <span>Il biglietto di:</span>
-                <span id="show-name">Nome e cognome</span>
-              </h4>
-            </div>
-            <div class="col-6 col-md-4">
-              <span><strong>Offerta:</strong></span>
-              <span id="show-discount"></span>
-            </div>
-            <div class="col-6 col-md-4">
-              <span><strong>Prezzo del bigliettto:</strong></span>
-              <span id="show-price"></span>
+            <div class="col-12">
+              <div class="card my-4 train-ticket">
+                <div class="card-header bg-red">
+                  <div class="col-12 text-center">
+                    <h4>
+                      <span class="text-light">Il biglietto di:</span>
+                      <span id="show-name" class="text-light">Nome e cognome</span>
+                    </h4>
+                  </div>
+                </div>
+                <div class="card-body d-flex">
+                  <div class="col-6 text-center">
+                    <span class=""><strong>Offerta:</strong></span>
+                    <span id="show-discount" class=""></span>
+                  </div>
+                  <div class="col-6 text-center">
+                    <span class=""><strong>Prezzo del bigliettto:</strong></span>
+                    <span id="show-price" class=""></span>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </div>
         </form>

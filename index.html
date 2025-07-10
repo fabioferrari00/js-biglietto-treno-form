@@ -14,7 +14,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1 class="text-center my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <h2 class="text-center my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
         <form action="#">
           <div class="row g-3">
             <div class="col-12 col-md-4">
@@ -28,11 +28,37 @@
                 required>
             </div>
             <div class="col-12 col-md-4">
-              <label for="" class="form-label">Eta</label>
-              <input type="text" name="age" id="age" class="form-control" placeholder="Inserisci la tua età" required>
+              <label for="" class="form-label">Fascia età</label>
+              <select name="age" id="age" class="form-select">
+                <option value="">Inserisci la tua fascia</option>
+                <option value="u">Minorenne</option>
+                <option value="o">Over 65</option>
+                <option value="null">Nessuno</option>
+              </select>
             </div>
             <div class="col-12">
               <button id="calc-ticket" class="btn btn-primary">Calcola bilgietto</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-12">
+        <h2 class="text-center my-3">IL TUO BIGLIETTO</h2>
+        <form action="#">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <h4>
+                <span>Il biglietto di:</span>
+                <span id="show-name">Nome e cognome</span>
+              </h4>
+            </div>
+            <div class="col-6 col-md-4">
+              <span><strong>Offerta:</strong></span>
+              <span id="show-discount"></span>
+            </div>
+            <div class="col-6 col-md-4">
+              <span><strong>Prezzo del bigliettto:</strong></span>
+              <span id="show-price"></span>
             </div>
           </div>
         </form>

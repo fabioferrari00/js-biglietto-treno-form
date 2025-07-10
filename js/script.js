@@ -10,15 +10,24 @@ calcTicket.addEventListener('click', function (e) {
   const km = document.getElementById('km').value;
   const age = document.getElementById('age').value;
 
-  let discount = 0;
-  let price = 0.21 * km;
 
-  if (age < 18) {
-    discount = price * 20 / 100;
-  } else if (age > 65) {
-    discount = price * 40 / 100;
+
+  let price = 0.21 * km;
+  let discount = '';
+
+  if (age == 'u') {
+    price = price * 0.8;
+    discount = 'Sconto del 20%';
+  } else if (age == 'o') {
+    price = price * 0.6;
+    discount = 'Sconto del 40%';
+  } else {
+    discount = 'Biglietto standard';
   }
-  price = price - discount;
-  console.log(price.toFixed(2));
+
+
+  document.getElementById('show-name').innerText = name;
+  document.getElementById('show-discount').innerText = discount;
+  document.getElementById('show-price').innerText = price.toFixed(2) + '€';
 
 })

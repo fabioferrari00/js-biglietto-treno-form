@@ -10,8 +10,35 @@
   <title>Document</title>
 </head>
 
-<body>
-
+<body class="bg-green">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center my-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <form action="#">
+          <div class="row g-3">
+            <div class="col-12 col-md-4">
+              <label for="" class="form-label">Nome e Cognome</label>
+              <input type="number" name="name" id="name" class="form-control" placeholder="Inserisci Nome e Cognome"
+                required>
+            </div>
+            <div class="col-12 col-md-4">
+              <label for="" class="form-label">Km da percorrere</label>
+              <input type="text" name="km" id="km" class="form-control" placeholder="Inserisci i km da percorrere"
+                required>
+            </div>
+            <div class="col-12 col-md-4">
+              <label for="" class="form-label">Eta</label>
+              <input type="number" name="eta" id="eta" class="form-control" placeholder="Inserisci la tua età" required>
+            </div>
+            <div class="col-12">
+              <button id="send" class="btn btn-primary">Calcola bilgietto</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="./js/script.js"></script>
 </body>
